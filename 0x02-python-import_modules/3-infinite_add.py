@@ -7,9 +7,9 @@ if __name__ == "__main__":
         arglen = len(argv) - 1
         
         if arglen == 0:
-            print(0)
+            mysum += 0
         else:
             for i in range(1,len(argv)):
                 mysum += int(argv[i])
                         
-    print(f"{mysum}")
+    print("{}".format(mysum))
