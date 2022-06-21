@@ -2,6 +2,5 @@
 
 
 class Square:
-    """ class that returns an empty square
-    """
+    """ class that returns an empty square"""
     pass
