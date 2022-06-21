@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+"""Define a square"""
 
 
 class Square:
-    """ class that returns an empty square"""
+    """ Rep the square"""
     pass
