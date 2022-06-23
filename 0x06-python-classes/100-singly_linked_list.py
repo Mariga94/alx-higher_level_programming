@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Class that defines node of a singly linked list"""
 
-
+ 
 class Node:
     """Represents a node"""
 
@@ -47,10 +47,11 @@ class SinglyLinkedList:
     def __init__(self):
         self.__head = None
 
-    def sorted_insert(self, value):
-        """inserts a new Node into the correct sorted position"""
-        node = Node(value)
+    def print_list(head):
+        """print linked list"""
+        current = self.head
+        while(current != None):
+            print(current, end=" ")
+            current = current.next
 
-        if self.__head is None:
-            self.__head = node
-           
+    def insertionSort(
