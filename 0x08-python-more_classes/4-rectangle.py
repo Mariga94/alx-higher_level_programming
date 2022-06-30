@@ -67,15 +67,14 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             print("")
         else:
-            for i in range(self.__width):
-                for i in range(self.__height):
-                    print('#', end="")
-                print()
+            rectangle = []
+            for i in range(self.__height):
+                for i in range(self.__width):
+                    rectangle.append("#")
+                if i < self.__height - 1:
+                    rectangle.append("\n")
+            return "".join(rectangle)
 
     def __repr__(self):
         """Returns the string representantion of an object for machine use"""
         return 'Rectangle({}, {})'.format(self.__width, self.__height)
-
-    def __del__(self):
-        """Destroys an instance of an object"""
-        print('Bye rectangle...')
