@@ -56,6 +56,7 @@ class Rectangle:
             return ""
         else:
             rectangle = []
+
             for i in range(self.__height):
                 for j in range(self.__width):
                     rectangle.append('#')
