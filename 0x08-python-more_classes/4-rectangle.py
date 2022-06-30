@@ -65,7 +65,7 @@ class Rectangle:
     def __str__(self):
         """Returns a string representation of an object"""
         if self.__width == 0 or self.__height == 0:
-            print("")
+            return "\n"
         else:
             rectangle = []
             for i in range(self.__height):
