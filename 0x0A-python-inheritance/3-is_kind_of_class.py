@@ -5,6 +5,6 @@
 """
 
 
-def is_kind_of_class(obj, class):
+def is_kind_of_class(obj, a_class):
     """function that returns true else false"""
-    return isinstance(obj, class)
+    return isinstance(obj, a_class)
