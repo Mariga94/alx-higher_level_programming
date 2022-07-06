@@ -22,6 +22,8 @@ class Student:
                 all(type(ele) == str for ele in attrs)):
             return {i: getattr(self, i) for i in attrs if hasattr(self, i)}
         return self.__dict__
-
-    def i, j in json.items():
-        setattr(self, i, j)
+    
+    def reload_from_json(self, json):
+        """Replace atrributes"""
+        for i, j in json.items():
+            setattr(self, i, j)
