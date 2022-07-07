@@ -16,15 +16,20 @@ Contains no initializations of data
 
 	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 	>>> bg = BaseGeometry()
-	>>> type(bg)
-	<class '7-base_geometry.BaseGeometry')
+	>>> type(bg) #doctest: +REPORT_NDIFF
+	<class '7-base_geometry.BaseGeometry'>
+
+::
+	>>> print(bg) #doctest: +ELLIPSIS 
+	<7-base_geometry.BaseGeometry object at ...>
 
 Arguments supplied to an instantiation of ``BaseGeometry`` gives TypeError.
 
 ::
-	>>> bg = BaseGeometry(None)
+
+	>>> bg = BaseGeometry(None) #doctest: +REPORT_NDIFF
 	Traceback (most recent call last):
-	TypeError: object() takes no arguments
+	TypeError: BaseGeometry() takes no arguments
 
 Methods
 -------
@@ -66,8 +71,7 @@ if ``value`` is an integer an less or equal to zero, it raises a ``ValueError``
 ``name`` and ``value`` must be provided. Else, raise ``TypeError``
 
 ::
-	>>> bg.integer_validator() #doctest: +NORMALIZE_WHITESPACE
+	>>> bg.integer_validator() #doctest: +NORMALIZE_WHITESPACE, +REPORT_CDIFF
 	Traceback (most recent call last):
-	TypeError: integer_validator() missing 2 required position arguments:
-	'name and 'value'
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
