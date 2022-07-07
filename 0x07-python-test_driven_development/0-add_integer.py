@@ -3,7 +3,7 @@
 
 
 def add_integer(a, b=98):
-    """
+    """ Add two integers together
     Args:
         a (int): The first parameter.
         b (int): The second parameter. Defaults to 98.
@@ -21,11 +21,9 @@ def add_integer(a, b=98):
     elif type(b) is float:
         b = int(b)
 
-
     if not type(a) is int:
         raise TypeError("a must be an integer")
     elif not type(b) is int:
         raise TypeError("b must be an integer")
-
     sum = a + b
     return sum
