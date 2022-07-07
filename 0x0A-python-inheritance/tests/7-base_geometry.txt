@@ -51,6 +51,31 @@ If ``value`` is not an integer, it raises a ``TypeError``
 	Traceback (most recent call last):
 	TypeError: invalid number must be an integer
 
+::
+	>>> bg.integer_validator("invalid tuple", (5,)) #doctest: +REPORT_NDIFF
+	Traceback (most recent call last):
+	TypeError: invalid tuple must be an integer
+
+::
+	>>> bg.integer_validator("invalid list", [4])
+	Traceback (most recent call last):
+	TypeError: invalid list must be an integer
+
+::
+	>>> bg.integer_validator("invalid boolean", True)
+	Traceback (most recent call last):
+	TypeError: invalid boolean must be an integer
+
+::
+	>>> bg.integer_validator("invalid dictionary", {3,4})
+	Traceback (most recent call last):
+	TypeError: invalid dictionary must be an integer
+
+::
+	>>> bg.integer_validator("and another", None)
+	Traceback (most recent call last):
+	TypeError: and another must be an integer
+
 else if ``value`` is an integer it does nothing
 
 ::
@@ -67,7 +92,7 @@ if ``value`` is an integer an less or equal to zero, it raises a ``ValueError``
 	>>> bg.integer_validator("invalid number", 0)
 	Traceback (most recent call last):
 	ValueError: invalid number must be greater than 0
-
+	
 ``name`` and ``value`` must be provided. Else, raise ``TypeError``
 
 ::
