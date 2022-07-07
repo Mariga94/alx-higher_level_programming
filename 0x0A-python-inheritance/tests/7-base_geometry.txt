@@ -1,0 +1,73 @@
+``7-base_geometry`` module
+===========================
+
+How to use 7-base_geometry.py
+
+=============================
+
+Module defines a class BaseGeometry.
+
+Instantiation
+-------------
+
+Contains no initializations of data
+
+::
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bg = BaseGeometry()
+	>>> type(bg)
+	<class '7-base_geometry.BaseGeometry')
+
+Arguments supplied to an instantiation of ``BaseGeometry`` gives TypeError.
+
+::
+	>>> bg = BaseGeometry(None)
+	Traceback (most recent call last):
+	TypeError: object() takes no arguments
+
+Methods
+-------
+
+``BaseGeometry`` has two methods - ``area(self)`` and ``integer_validator(self, name, value)``
+
+::
+	>>> bg = BaseGeometry()
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+``integer_validator(...)`` validates value, where 
+
+If ``value`` is not an integer, it raises a ``TypeError``
+
+::
+	>>> bg.integer_validator("invalid number", "number")
+	Traceback (most recent call last):
+	TypeError: invalid number must be an integer
+
+else if ``value`` is an integer it does nothing
+
+::
+	>>> bg.integer_validator("valid number", 30)
+
+if ``value`` is an integer an less or equal to zero, it raises a ``ValueError``
+
+::
+	>>> bg.integer_validator("invalid number", -1)
+	Traceback (most recent call last):
+	ValueError: invalid number must be greater than 0
+
+::
+	>>> bg.integer_validator("invalid number", 0)
+	Traceback (most recent call last):
+	ValueError: invalid number must be greater than 0
+
+``name`` and ``value`` must be provided. Else, raise ``TypeError``
+
+::
+	>>> bg.integer_validator() #doctest: +NORMALIZE_WHITESPACE
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required position arguments:
+	'name and 'value'
+
