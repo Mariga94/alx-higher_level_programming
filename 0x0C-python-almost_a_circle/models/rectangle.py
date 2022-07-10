@@ -99,3 +99,29 @@ class Rectangle(Base):
         string += ") " + str(self.x) + "/" + str(self.y) + " - "
         string += str(self.width) + "/" + str(self.height)
         return string
+
+    def update(self, *args):
+        """update the class Rectangle
+        Args:
+            *args (ints): new values
+                1st argument should be the id attribute
+                2nd argument should be the width attribute
+                3rd argument should be the height attribute
+                4th argument should be the x attribute
+                5th argument should be the y attribute
+        """
+        if args and len(args) > 0:
+            for arg in range(len(args)):
+                if arg == 0:
+                    if args[arg] is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = args[arg]
+                elif arg == 1:
+                    self.width = args[arg]
+                elif arg == 2:
+                    self.height = args[arg]
+                elif arg == 3:
+                    self.x = args[arg]
+                elif arg == 4:
+                    self.y = args[arg]
