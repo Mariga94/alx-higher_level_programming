@@ -1,2 +1,2 @@
---creates a database
+-- creates a database
 CREATE DATABASE hbtn_0c_0 
