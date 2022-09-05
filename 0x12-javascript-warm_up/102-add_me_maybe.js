@@ -1,7 +1,5 @@
 #!/usr/bin/node
-function addMeMaybe (x, theFunction) {
-  for (let i = 0; i < x; i++) {
-    theFunction();
-  }
+function addMeMaybe(x, theFunction) {
+    theFunction(x + 1);
 }
-module.exports = addMeMaybe;
+module.exports.addMeMaybe = addMeMaybe;
