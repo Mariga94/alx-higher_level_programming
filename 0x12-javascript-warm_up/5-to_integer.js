@@ -1,13 +1,13 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
+const count = process.argv.length;
 
-if (argv.length >= 3) {
-  const int = parseInt(argv[2]);
+if (count >= 3) {
+  const int = parseInt(process.argv[2]);
 
   if (Number.isInteger(int)) {
     console.log('My number: ' + int);
   } else {
-    console.log(`${argv[2]}` + ' Not a number');
+    console.log('Not a number');
   }
 } else {
   console.log('Not a number');
