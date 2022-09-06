@@ -1,10 +1,10 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
+const count = process.argv.length;
 
-if (argv.length === 3) {
-  console.log(`${argv[2]}` + ' is undefined');
-} else if (argv.length === 4) {
-  console.log(`${argv[2]}` + ' is ' + `${argv[3]}`);
-} else if (argv.length === 2) {
+if (count === 3) {
+  console.log(`${process.argv[2]}` + ' is undefined');
+} else if (count === 4) {
+  console.log(`${process.argv[2]}` + ' is ' + `${process.argv[3]}`);
+} else if (count === 2) {
   console.log('undefined is undefined');
 }
