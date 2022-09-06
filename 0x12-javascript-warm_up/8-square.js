@@ -17,5 +17,5 @@ if (length >= 3) {
 } else if (length === 2) {
   console.log('Missing size');
 } else if (length < 0) {
-	return;
+	console.log();
 }
