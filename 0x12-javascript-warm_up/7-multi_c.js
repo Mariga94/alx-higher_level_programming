@@ -1,8 +1,7 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
-const length = argv.length;
+const length = process.argv.length;
 if (length >= 3) {
-  const counter = parseInt(argv[2]);
+  const counter = parseInt(process.argv[2]);
   for (let i = 0; i < counter; i++) {
     console.log('c is fun');
   }
