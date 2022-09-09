@@ -9,11 +9,10 @@ if __name__ == "__main__":
             user=argv[1],
             passwd=argv[2],
             db=argv[3])
-    db.query("""
-    SELECT id, name
-    FROM states
-    ORDER BY id ASC""")
-    result = db.store_result()
-    states = result.fetch_row(maxrows=0)
+    cur = db.cursor()
+    cur.execute("SELECT id, name FROM states ORDER BY id ASC")
+    states = cur.fetchall() 
     for state in states:
         print(state)
+    cur.close()
+    db.close()
