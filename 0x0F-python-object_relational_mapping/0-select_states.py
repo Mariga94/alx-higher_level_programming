@@ -16,3 +16,5 @@ try:
         print(state)
 except MySQLdb.Error as Error:
     print(Error)
+finally:
+    db.close()
