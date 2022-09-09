@@ -10,9 +10,14 @@ try:
             password=argv[2],
             db=argv[3]
             )
-    db.query("""SELECT id, name FROM states WHERE name LIKE "N%"
-            ORDER BY id""")
+    db.query("""
+    SELECT id, name FROM states
+    WHERE name LIKE "N%"
+    ORDER BY id ASC
+    """)
     result = db.store_result()
-    print(result.fetch_row(maxrows=2))
-exception MySQLdb.Error as Error:
+    rows = result.fetch_row(maxrows=2)
+    for row in rows:
+        print(row)
+except MySQLdb.Error as Error:
     print(Error)
