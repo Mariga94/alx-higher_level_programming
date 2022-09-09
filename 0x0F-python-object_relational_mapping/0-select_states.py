@@ -11,6 +11,7 @@ try:
     cur = db.cursor()
     cur.execute("SELECT id, name FROM states ORDER BY id ASC")
     states = cur.fetchmany(5)
-    print(states)
+    for state in states:
+        print(state)
 except MySQLdb.Error as Error:
     print(Error)
