@@ -1,3 +1,3 @@
-#!/usr/bin/bash
+#!/bin/bash
 # Sends a delete req
-curl -X '%{DELETE}' $1;
+curl -sX DELETE $1;
