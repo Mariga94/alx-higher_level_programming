@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Fetch"""
+"""
+Fetches status
+"""
 import urllib.request
 
 
