@@ -14,9 +14,9 @@ At the end of this project, you are expected to be able to explain:
 - How to `INSERT`, `UPDATE` or `DELETE` data
 - What are `subquirres`
 - How to use MySQL functions
-
-## Author
-- **Joseph Mariga**
+## Tasks
+1. 0-list_databases.sql
+Script that liss all databases of your MYSQL server
 
 ## Acknowledgement
 - This is part of the software engineering program offered by ALX.
