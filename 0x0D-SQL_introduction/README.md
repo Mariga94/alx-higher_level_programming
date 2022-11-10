@@ -37,6 +37,10 @@ Script that displays the number of recoirs with `id=89` in the table `first_tabl
 Write a script that creates a table `second_table` in the database `hbtn_0c_0` in your MySQL server and add multiples rows.
 10. [10-top_score.sql](https://github.com/Mariga94/alx-higher_level_programming/blob/master/0x0D-SQL_introduction/10-top_score.sql)
 Script that lists all records of the table `second_table` of the database `hbtn_0c_0` in your MySQL server.
+11. [11-best_score.sql](https://github.com/Mariga94/alx-higher_level_programming/blob/master/0x0D-SQL_introduction/11-best_score.sql)
+Script that lists all records with a `score >= 10` in the table `second_table` of the database `hbtn_0c_0` in your MySQL server.
+12. [12-no_cheating.sql](https://github.com/Mariga94/alx-higher_level_programming/blob/master/0x0D-SQL_introduction/12-no_cheating.sql)
+Script that updates the score of Bob to `10` in the table `second_table`
 
 ## Acknowledgement
 - This is part of the software engineering program offered by ALX.
