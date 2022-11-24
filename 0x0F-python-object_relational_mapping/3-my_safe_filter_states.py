@@ -8,7 +8,7 @@ import sys
 import MySQLdb
 
 if __name__ == '__main__':
-    db.connect(
+    db = MySQLdb.connect(
             host='127.0.0.1',
             port=3306,
             user=sys.argv[1],
@@ -16,9 +16,7 @@ if __name__ == '__main__':
             db=sys.argv[3])
 
     cur = db.cursor()
-    cur.execute("SELECT id, name FROM `states` WHERE name='%s'", [sys.argv[4]])
+    cur.execute("SELECT id, name FROM `states` WHERE name=%s", [sys.argv[4]])
     states = cur.fetchall()
     for state in states:
         print(state)
-    cur.close()
-    db.close()
