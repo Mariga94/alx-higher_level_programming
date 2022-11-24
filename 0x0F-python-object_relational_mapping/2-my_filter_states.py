@@ -16,7 +16,8 @@ if __name__ == "__main__":
             db=sys.argv[3])
 
     cur = db.cursor()
-    cur.execute("SELECT id, name FROM states WHERE name = %s", [sys.argv[4]])
+    cur.execute("SELECT id, name FROM states
+                WHERE name={}".format(sys.argv[4]))
     states = cur.fetchall()
     for state in states:
         print(state)
