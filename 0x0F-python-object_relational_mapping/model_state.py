@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# Defines a State model.
+"""
+Defines a State model and inherites from SQLAlchemy Base
+"""
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
